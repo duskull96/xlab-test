@@ -1,0 +1,142 @@
+@import '../../../../fonts/fonts.scss';
+
+.container {
+    padding: 32px;
+    display: flex;
+    flex-flow: row wrap;
+
+    .title {
+        width: 100%;
+        margin-bottom: 16px;
+
+        h1 {
+            margin: 0;
+            color: #1C1C1E;
+            @include fontMontserrat(700, 26px, 32px);
+        }
+    }
+
+    .form {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        margin-bottom: 32px;
+
+        label {
+            width: 100%;
+            color: #1C1C1E;
+            margin-bottom: 24px;
+            @include fontMontserrat(500, 20px, 24px);
+        }
+
+        .input {
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100%;
+            max-width: 1440px;
+
+            @media screen and(max-width:600px) {
+                flex-flow: row wrap;
+            }
+
+            input {
+                width: 75%;
+                height: 70px;
+                box-sizing: border-box;
+                border: 3px solid #4F27BF;
+                border-radius: 10px;
+                padding: 23px 0 23px 24px;
+                margin-right: 24px;
+                outline: none;
+                color: #1C1C1E;
+                @include fontMontserrat(500, 20px, 24px);
+
+                @media screen and(max-width: 1024px) {
+                    width: 70%;
+                }
+
+                @media screen and(max-width:600px) {
+                    width: 100%;
+                    margin: 0px 0px 10px 0px;
+                }
+            }
+
+            button {
+                width: 25%;
+                height: 70px;
+                background-color: #4F27BF;
+                border-radius: 10px;
+                outline: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                cursor: pointer;
+                border: none;
+                color: #FFFFFF;
+                @include fontMontserrat(700, 26px, 32px);
+
+                @media screen and(max-width: 1024px) {
+                    width: 30%;
+                }
+
+                @media screen and(max-width:600px) {
+                    width: 100%;
+                }
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 16px;
+                }
+            }
+        }
+
+    }
+
+    .content {
+        width: 100%;
+        max-width: 1440px;
+        box-shadow: 0px 2px 8px rgba(2, 0, 97, 0.25);
+        border-radius: 10px;
+        padding: 24px;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row wrap;
+
+        .title {
+            h1 {
+                color: #000000;
+                @include fontMontserrat(700, 26px, 32px);
+            }
+        }
+
+        .addresses {
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+
+            .item {
+                width: 100%;
+                position: relative;
+                text-overflow: ellipsis;
+                box-sizing: border-box;
+                padding: 16px 0px 16px 0px;
+                color: #000000;
+                @include fontMontserrat(500, 20px, 24px);
+
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #D7D7D7;
+                    content: ' ';
+                }
+            }
+        }
+
+    }
+
+}

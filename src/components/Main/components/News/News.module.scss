@@ -1,0 +1,45 @@
+@import '../../../../fonts/fonts.scss';
+
+.container {
+    padding: 32px;
+    display: flex;
+    flex-flow: row wrap;
+
+    .title {
+        width: 100%;
+
+        h1 {
+            margin: 0;
+            @include fontMontserrat(700, 26px, 32px);
+        }
+    }
+
+    .news {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 16px;
+
+        .item {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+
+            .title {
+                margin-bottom: 24px;
+
+                h2 {
+                    margin: 0;
+                    color: #1C1C1E;
+                    @include fontMontserrat(500, 20px, 24px);
+                }
+            }
+
+            .content {
+                p {
+                    margin: 0;
+                    @include fontMontserrat(500, 20px, 24px)
+                }
+            }
+        }
+    }
+}

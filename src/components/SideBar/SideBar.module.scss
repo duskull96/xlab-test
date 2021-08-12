@@ -1,0 +1,190 @@
+@import '../../fonts/fonts.scss';
+
+@mixin icon($margin-right) {
+    margin-right: $margin-right;
+    height: 32px;
+    width: 32px;
+}
+
+.containerSM {
+    width: 60px;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 5px rgba(2, 0, 96, 0.25);
+    box-sizing: border-box;
+    height: calc(100% - 80px);
+    padding: 25px 10px 0px 10px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+
+    img {
+        height: 32px;
+        width: 32px;
+    }
+}
+
+.container {
+    margin-top: 80px;
+    width: 300px;
+    height: calc(100% - 80px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 5px rgba(2, 0, 96, 0.25);
+    box-sizing: border-box;
+    padding: 24px 0px 24px 32px;
+    overflow-y: scroll;
+
+    @media screen and(max-width:768px) {
+        position: fixed;
+        background-color: #FFFFFF;
+        z-index: 1000;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .title {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            color: #1C1C1E;
+            @include fontMontserrat(700, 20px, 24px)
+        }
+
+        img {
+            height: 25px;
+            width: 25px;
+            margin-right: 20px;
+        }
+    }
+
+    .list {
+        margin-top: 32px;
+        width: 100%;
+        overflow-x: hidden;
+
+        .item {
+            margin-bottom: 40px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+
+            a {
+                color: #1C1C1E;
+            }
+
+            .link {
+                text-decoration: none;
+                display: flex;
+                flex-flow: nowrap row;
+                align-items: center;
+                cursor: pointer;
+                width: 100%;
+
+                .icon {
+                    @include icon(16px);
+                }
+
+                .title {
+
+                    @include fontMontserrat(600, 20px, 24px)
+                }
+
+            }
+
+            .activeLink {
+                &::after {
+                    position: absolute;
+                    right: -3px;
+                    top: 0;
+                    width: 6px;
+                    height: 100%;
+                    background-color: #4F27BF;
+                    border-radius: 5px;
+                    content: ' ';
+                }
+            }
+
+
+
+        }
+
+        .extendedItem {
+            margin-bottom: 40px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+            flex-wrap: wrap;
+
+            .link {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-flow: row nowrap;
+                width: 100%;
+                cursor: pointer;
+
+                .head {
+                    display: flex;
+                    align-items: center;
+
+                    .icon {
+                        @include icon(16px);
+                    }
+
+                    .title {
+                        @include fontMontserrat(600, 20px, 24px)
+                    }
+                }
+
+                .trianlge {
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        .subItem {
+            margin: 32px 44px 0px 46px;
+            position: relative;
+
+            .link {
+                text-decoration: none;
+                display: flex;
+                flex-flow: nowrap row;
+                align-items: center;
+                cursor: pointer;
+                width: 100%;
+
+                .icon {
+                    @include icon(14px);
+                }
+
+                .title {
+                    @include fontMontserrat(600, 20px, 24px)
+                }
+
+            }
+
+            .activeLink {
+                &::after {
+                    position: absolute;
+                    right: -3px;
+                    top: 0;
+                    width: 6px;
+                    height: 100%;
+                    background-color: #4F27BF;
+                    border-radius: 5px;
+                    content: ' ';
+                }
+            }
+        }
+    }
+}
