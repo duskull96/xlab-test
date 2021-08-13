@@ -36,6 +36,7 @@
 
             .content {
                 p {
+                    white-space: pre-line;
                     margin: 0;
                     @include fontMontserrat(500, 20px, 24px)
                 }

@@ -22,9 +22,16 @@
         flex-flow: row wrap;
         margin-bottom: 32px;
 
-        label {
+        .label {
             width: 100%;
             color: #1C1C1E;
+            margin-bottom: 24px;
+            @include fontMontserrat(500, 20px, 24px);
+        }
+
+        .labelError {
+            width: 100%;
+            color: #c90000;
             margin-bottom: 24px;
             @include fontMontserrat(500, 20px, 24px);
         }
